@@ -1,5 +1,4 @@
 using System;
-using OnixData.Version3.Text;
 
 namespace OnixData.Version3.Text
 {
