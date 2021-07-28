@@ -1,4 +1,4 @@
-name: .NET
+name: CI
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ master, NetStandard ]
 
 jobs:
-  build:
+  Build and Tests:
 
     runs-on: ubuntu-latest
 
