@@ -10,17 +10,17 @@ jobs:
     name: Workflow test
     runs-on: ubuntu-latest
     steps:
-   # - name: .NET Tests Results
-   #   uses: dorny/test-reporter@v1
-   #   with:
-   #     artifact: test-results
-   #     name: .NET Tests results           
-   #     path: '**/TestResults/*.trx'    
-   #     reporter: dotnet-trx  
+    - name: .NET Tests Results
+      uses: dorny/test-reporter@v1
+      with:
+        artifact: test-results
+        name: .NET Tests results           
+        path: '**/**/*.trx'    
+        reporter: dotnet-trx  
     - name: Code Coverage
       uses: zgosalvez/github-actions-report-lcov@v1
       with:
-        coverage-files: '**/TestResults/coverage.info'
+        coverage-files: '**/**/coverage.info'
         minimum-coverage: 0
         artifact-name: code-coverage-report
         github-token: ${{ secrets.GITHUB_TOKEN }}
