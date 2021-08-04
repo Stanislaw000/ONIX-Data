@@ -29,5 +29,4 @@ jobs:
           'TestResults/coverage.info'
           'coverage.info'
           '*.info'
-        minimum-coverage: 0
         github-token: ${{ secrets.GITHUB_TOKEN }}
